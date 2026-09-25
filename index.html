@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sharad Dubey — Senior Frontend Engineer specializing in React.js, Next.js, TypeScript, scalable architecture and performance.">
+<title>Sharad Dubey | Senior Frontend Engineer</title>
+<style>
+:root{
+  --bg:#08090d;--panel:#101218;--panel2:#151821;--text:#f5f7fb;--muted:#9aa3b2;
+  --line:#252a35;--accent:#7c5cff;--accent2:#25d0a3;--max:1180px
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:
+radial-gradient(circle at 80% 10%,rgba(124,92,255,.18),transparent 28%),var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(calc(100% - 40px),var(--max));margin:auto}
+nav{position:sticky;top:0;z-index:10;background:rgba(8,9,13,.78);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:-.03em;font-size:20px}
+.logo span{color:var(--accent)}
+.links{display:flex;gap:28px;color:var(--muted);font-size:14px}
+.links a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:12px;background:#fff;color:#08090d;font-weight:700;font-size:14px;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.dark{background:var(--panel2);color:#fff;border:1px solid var(--line)}
+.hero{padding:110px 0 90px;min-height:650px;display:flex;align-items:center}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;color:#c6baff;background:rgba(124,92,255,.1);border:1px solid rgba(124,92,255,.25);padding:7px 11px;border-radius:999px;font-size:13px;font-weight:700;margin-bottom:24px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--accent2);box-shadow:0 0 12px var(--accent2)}
+h1{font-size:clamp(48px,7vw,88px);line-height:.98;letter-spacing:-.065em;max-width:950px}
+.gradient{background:linear-gradient(100deg,#fff 20%,#a894ff 65%,#6eebca);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:20px;color:var(--muted);max-width:760px;margin:28px 0 34px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+section{padding:95px 0;border-top:1px solid var(--line)}
+.section-head{display:flex;justify-content:space-between;gap:40px;margin-bottom:42px}
+.kicker{color:var(--accent2);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+h2{font-size:clamp(32px,4vw,52px);letter-spacing:-.045em;line-height:1.05;margin-top:10px}
+.intro{max-width:530px;color:var(--muted)}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:70px}
+.about p{font-size:18px;color:#c1c7d2;margin-bottom:18px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat{padding:25px;background:var(--panel);border:1px solid var(--line);border-radius:18px}
+.stat strong{font-size:34px;display:block;letter-spacing:-.04em}
+.stat span{font-size:13px;color:var(--muted)}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.skill{padding:24px;background:var(--panel);border:1px solid var(--line);border-radius:18px}
+.skill h3{font-size:15px;margin-bottom:12px}
+.skill p{color:var(--muted);font-size:14px}
+.projects{display:grid;gap:22px}
+.project{background:linear-gradient(145deg,var(--panel),#0d0f14);border:1px solid var(--line);border-radius:24px;padding:32px}
+.project-top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:24px}
+.project-number{color:#6f7787;font-size:14px}
+.project h3{font-size:28px;letter-spacing:-.03em;margin:5px 0}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{font-size:12px;color:#b9c0cb;border:1px solid var(--line);padding:5px 9px;border-radius:999px}
+.case{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.case div{padding:18px;background:#0b0d12;border-radius:14px;border:1px solid #1e222c}
+.case b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent2);margin-bottom:7px}
+.case p{color:#aeb5c1;font-size:14px}
+.workflow{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.step{padding:18px 14px;background:var(--panel);border:1px solid var(--line);border-radius:15px}
+.step b{font-size:12px;color:var(--accent)}
+.step h3{font-size:15px;margin:6px 0}
+.step p{font-size:12px;color:var(--muted)}
+.cta{padding:90px 40px;text-align:center;border:1px solid var(--line);border-radius:28px;background:radial-gradient(circle at 50% 0%,rgba(124,92,255,.18),transparent 45%),var(--panel)}
+.cta h2{max-width:760px;margin:12px auto 18px}
+.cta p{color:var(--muted);max-width:650px;margin:0 auto 28px}
+footer{padding:35px 0;color:#717988;font-size:13px;display:flex;justify-content:space-between;gap:20px}
+@media(max-width:850px){
+ .links{display:none}.hero{padding:80px 0}.about,.skills{grid-template-columns:1fr}
+ .section-head{display:block}.intro{margin-top:18px}.case{grid-template-columns:1fr 1fr}.workflow{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:520px){
+ .container{width:min(calc(100% - 28px),var(--max))}h1{font-size:48px}.hero p{font-size:17px}
+ .case,.workflow,.stats{grid-template-columns:1fr}.project{padding:22px}.project-top{display:block}
+ footer{display:block}footer span{display:block;margin-top:8px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav">
+    <a class="logo" href="#">SD<span>.</span></a>
+    <div class="links">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Work</a><a href="#contact">Contact</a>
+    </div>
+    <a class="btn" href="mailto:sharad100197@gmail.com">Let's Talk</a>
+  </div>
+</nav>
+
+<main>
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow"><span class="dot"></span> Available for freelance & senior frontend opportunities</div>
+    <h1>Building <span class="gradient">fast, scalable</span> web experiences.</h1>
+    <p>Senior Frontend Engineer with 5+ years of experience building production-ready applications for AI-driven platforms and enterprise systems using React.js, Next.js, TypeScript and modern frontend architecture.</p>
+    <div class="actions">
+      <a class="btn" href="#work">Explore My Work ↓</a>
+      <a class="btn dark" href="mailto:sharad100197@gmail.com">Start a Project ↗</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+ <div class="container about">
+  <div>
+   <div class="kicker">01 — About</div>
+   <h2>I solve the hard frontend problems behind great products.</h2>
+   <p style="margin-top:28px">I’m a Senior Frontend Engineer focused on turning complex product requirements into clean, scalable and high-performance web experiences.</p>
+   <p>My experience spans AI-based platforms and high-traffic enterprise applications. I work across frontend architecture, reusable UI systems, REST API integration, SSR and performance optimization.</p>
+   <p>My approach: understand the product → architect the right solution → build reusable systems → optimize performance → ship reliably.</p>
+  </div>
+  <div class="stats">
+   <div class="stat"><strong>5+</strong><span>Years in frontend engineering</span></div>
+   <div class="stat"><strong>React</strong><span>Production application development</span></div>
+   <div class="stat"><strong>Next.js</strong><span>SSR & scalable web applications</span></div>
+   <div class="stat"><strong>5</strong><span>Featured projects across AI & enterprise</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="skills">
+ <div class="container">
+  <div class="section-head">
+   <div><div class="kicker">02 — Expertise</div><h2>Tools I build with.</h2></div>
+   <p class="intro">A focused stack for building maintainable, responsive and production-ready digital products.</p>
+  </div>
+  <div class="skills">
+   <div class="skill"><h3>Frontend</h3><p>React.js · Next.js · TypeScript · JavaScript ES6+ · HTML5 · CSS3 · Bootstrap · React Router</p></div>
+   <div class="skill"><h3>Architecture</h3><p>Component-Based Architecture · SSR · Responsive Design · Scalable Frontend Architecture · UX/UI</p></div>
+   <div class="skill"><h3>State Management</h3><p>Redux · Redux Toolkit · Context API</p></div>
+   <div class="skill"><h3>Backend & APIs</h3><p>Node.js · RESTful APIs · Microservices Architecture</p></div>
+   <div class="skill"><h3>Performance</h3><p>Core Web Vitals · Time-to-Interactive · Frontend Performance Optimization</p></div>
+   <div class="skill"><h3>Engineering</h3><p>Git · CI/CD Pipelines · AWS · Agile/Scrum · Webpack · Vite · Code Reviews</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="work">
+ <div class="container">
+  <div class="section-head">
+   <div><div class="kicker">03 — Selected Work</div><h2>Problems solved, not just screens built.</h2></div>
+   <p class="intro">Selected projects from RezoAI and Amdocs. Sensitive client and internal implementation details are intentionally kept out.</p>
+  </div>
+  <div class="projects">
+
+   <article class="project">
+    <div class="project-top">
+     <div><div class="project-number">01 / REZOAI</div><h3>Internal Dashboard — GenAI Operations</h3></div>
+     <div class="tags"><span class="tag">React</span><span class="tag">Redux</span><span class="tag">ApexCharts</span><span class="tag">RBAC</span><span class="tag">SSO</span></div>
+    </div>
+    <div class="case">
+     <div><b>Situation</b><p>RezoAI's conversational GenAI platform needed an internal operations interface for configuration, bot creation and real-time monitoring of AI voice/chat agents.</p></div>
+     <div><b>Task</b><p>Build an enterprise dashboard that could bring configuration, analytics, reporting and access controls into one scalable frontend experience.</p></div>
+     <div><b>Action</b><p>Built a React/Redux dashboard with real-time business metrics and reporting using ApexCharts/Recharts. Implemented RBAC with CASL, Azure MSAL/Google SSO, dynamic configuration screens and GenAI workflow management.</p></div>
+     <div><b>Result</b><p>Delivered a centralized internal platform for managing GenAI workflows, monitoring bot performance and enabling Business Analysts to configure automated workflows across clients.</p></div>
+    </div>
+   </article>
+
+   <article class="project">
+    <div class="project-top">
+     <div><div class="project-number">02 / REZOAI</div><h3>Voice Admin Portal — RAG, LLM & Analytics</h3></div>
+     <div class="tags"><span class="tag">Next.js</span><span class="tag">D3</span><span class="tag">ApexCharts</span><span class="tag">Flexmonster</span><span class="tag">Web Workers</span></div>
+    </div>
+    <div class="case">
+     <div><b>Situation</b><p>Conversational AI operations required specialized tooling for bot testing, knowledge-base ingestion, analytics and large-scale operational reporting.</p></div>
+     <div><b>Task</b><p>Create a secure admin experience with advanced AI controls, scalable analytics and reusable permission structures.</p></div>
+     <div><b>Action</b><p>Built RAG/LLM toggles, bot-creation test flows and Knowledge-Base ingestion UIs. Engineered analytics with ApexCharts, D3, Sankey and Flexmonster, plus CASL RBAC, MSAL SSO, dynamic permissions and reusable filters. Optimized production bundles with code-splitting, lazy chunks and Web Workers.</p></div>
+     <div><b>Result</b><p>Delivered a high-scale GenAI operations portal with advanced analytics, secure access controls and optimized frontend loading for high-volume users.</p></div>
+    </div>
+   </article>
+
+   <article class="project">
+    <div class="project-top">
+     <div><div class="project-number">03 / REZOAI</div><h3>Audio Analyzer — Real-Time Voice Data</h3></div>
+     <div class="tags"><span class="tag">Web Audio API</span><span class="tag">Signal Processing</span><span class="tag">Drag & Drop</span><span class="tag">Batch Processing</span></div>
+    </div>
+    <div class="case">
+     <div><b>Situation</b><p>Voice-bot training required a way to inspect and analyze complex audio data for voice-quality evaluation and dataset verification.</p></div>
+     <div><b>Task</b><p>Build a real-time browser application that could process training audio efficiently without unnecessary file-transfer overhead.</p></div>
+     <div><b>Action</b><p>Developed real-time audio visualization and analysis using web audio APIs and signal-processing algorithms. Added high-performance drag-and-drop client-side processing and an architecture for analyzing multiple large audio files in batches.</p></div>
+     <div><b>Result</b><p>Streamlined conversational dataset verification with direct client-side audio processing and efficient multi-file analysis workflows.</p></div>
+    </div>
+   </article>
+
+   <article class="project">
+    <div class="project-top">
+     <div><div class="project-number">04 / AMDOCS</div><h3>Back Office Retail Application</h3></div>
+     <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Enterprise</span><span class="tag">Subscriptions</span></div>
+    </div>
+    <div class="case">
+     <div><b>Situation</b><p>Internal retail operators needed an intuitive interface for customer profiles, production services and subscription management.</p></div>
+     <div><b>Task</b><p>Build a feature-rich back-office experience supporting multiple customer entities and end-to-end subscription operations.</p></div>
+     <div><b>Action</b><p>Developed customer and subscription management interfaces, multi-instance provisioning and dynamic modification modules for subscription scaling and cascading family-member changes.</p></div>
+     <div><b>Result</b><p>Enabled operators to manage customer entities and subscription lifecycles through a centralized production interface.</p></div>
+    </div>
+   </article>
+
+   <article class="project">
+    <div class="project-top">
+     <div><div class="project-number">05 / AMDOCS</div><h3>Experience Manage — Low-Code Developer Tool</h3></div>
+     <div class="tags"><span class="tag">JSX</span><span class="tag">Low-Code</span><span class="tag">Micro-Frontend</span><span class="tag">API Integration</span></div>
+    </div>
+    <div class="case">
+     <div><b>Situation</b><p>Users with limited programming experience needed a faster way to assemble and customize application layouts.</p></div>
+     <div><b>Task</b><p>Create a low-code environment using predefined UI components while abstracting API integrations and event handling.</p></div>
+     <div><b>Action</b><p>Architected a JSX layout builder with reusable components such as forms, headers and buttons. Added interactive configuration, publishing, saving and dynamic page modification, plus micro-frontend linking and navigation mapping.</p></div>
+     <div><b>Result</b><p>Created a visual development workflow that simplified page assembly, configuration and navigation across decoupled frontend components.</p></div>
+    </div>
+   </article>
+
+  </div>  </div>
+ </div>
+</section>
+
+<section>
+ <div class="container">
+  <div class="section-head">
+   <div><div class="kicker">04 — Process</div><h2>From requirement to production.</h2></div>
+  </div>
+  <div class="workflow">
+   <div class="step"><b>01</b><h3>Understand</h3><p>Product, users & constraints.</p></div>
+   <div class="step"><b>02</b><h3>Architect</h3><p>Choose a scalable solution.</p></div>
+   <div class="step"><b>03</b><h3>Build</h3><p>Reusable production code.</p></div>
+   <div class="step"><b>04</b><h3>Integrate</h3><p>APIs & backend services.</p></div>
+   <div class="step"><b>05</b><h3>Optimize</h3><p>Performance & Web Vitals.</p></div>
+   <div class="step"><b>06</b><h3>Ship</h3><p>Reliable production delivery.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="container">
+  <div class="cta">
+   <div class="kicker">05 — Let's Work Together</div>
+   <h2>Have a product that needs a better frontend?</h2>
+   <p>Whether you're building an MVP, scaling an existing product or need senior frontend engineering support, let's build something fast, scalable and production-ready.</p>
+   <a class="btn" href="mailto:sharad100197@gmail.com">sharad100197@gmail.com ↗</a>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer class="container">
+ <span>© 2026 Sharad Dubey. Built with HTML & CSS.</span>
+ <span>React · Next.js · TypeScript · Frontend Engineering</span>
+</footer>
+</body>
+</html>
